@@ -1,23 +1,23 @@
-package HomeWork1;
-
-import HomeWork1.model.Kotik;
-
+import model.Kotik;
 
 public class Application {
 
     public static void main(String[] args) throws InterruptedException {
 
-        Kotik first = new Kotik(10, "String name", 5, "meow");
-        Kotik second = new Kotik(5, "String", 4, "gaf");
+        Kotik first = new Kotik("String", 10, 5, "meow");
+        Kotik second = new Kotik();
+        second.setName("name");
+        second.setWeight(5);
+        second.setPrettiness(2);
+        second.setMeow("gav");
 
         first.liveAnotherDay();
-        System.out.println(first.name + " " + first.weight);
+        System.out.println("Name: " + first.getName() + "   " + "Weight: " + first.getWeight());
 
-        if (first.meow.equals(second.meow))
-            System.out.println("Мы разговариваем одинаково))");
-         else
-            System.out.println("Мы разные((");
+        if (first.getMeow().equals(second.getMeow())) System.out.println
+                ("Мы разговариваем одинаково))");
+        else System.out.println("Мы разные((");
 
-        System.out.println(Kotik.counter);
+        System.out.println(Kotik.getCounter());
     }
 }
