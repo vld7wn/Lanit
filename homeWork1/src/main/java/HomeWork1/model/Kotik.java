@@ -74,53 +74,48 @@ public class Kotik {
 
 
     public boolean play() {
-        if (!(satiety <= 0)) {
+        if (satiety > 0) {
             satiety -= 1;
             System.out.println(" Play");
             return true;
-        } else {
-            return false;
         }
+        return false;
     }
 
     public boolean sleep() {
-        if (!(satiety <= 0)) {
+        if (satiety > 0) {
             satiety -= 1;
             System.out.println(" Sleep");
             return true;
-        } else {
-            return false;
         }
+        return false;
     }
 
     public boolean chaseMouse() {
-        if (!(satiety <= 0)) {
+        if (satiety > 0) {
             satiety -= 1;
             System.out.println(" chaseMouse");
             return true;
-        } else {
-            return false;
         }
+        return false;
     }
 
     public boolean jump() {
-        if (!(satiety <= 0)) {
+        if (satiety > 0) {
             satiety -= 1;
             System.out.println(" jump");
             return true;
-        } else {
-            return false;
         }
+        return false;
     }
 
     public boolean run() {
-        if (!(satiety <= 0)) {
+        if (satiety > 0) {
             satiety -= 1;
             System.out.println(" run");
             return true;
-        } else {
-            return false;
         }
+        return false;
     }
 
 
