@@ -19,9 +19,10 @@ public class Aviary<T extends Animal> {
     }
 
     public void remove(String name) {
-        if (animals.remove(name) == null) System.out.println(name);
-        else System.out.println(name);
+        if (animals.remove(name) == null) System.out.println(name + "There is no such animal!");
+        else System.out.println(name + "Was removed from the aviary!");
     }
+    
     public void add(T animal){
         if (animal.getSize().getSize() < size.getSize())
             animals.put(animal.getName(), animal);
