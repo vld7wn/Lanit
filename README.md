@@ -9,3 +9,6 @@
 
 
 # [Lanit_Second_Homework](https://github.com/vld7wn/Lanit/tree/main/HomeWork2/src/main/java)
+
+# [Lanit_Third_Homework](https://github.com/vld7wn/Lanit/tree/main/HomeWork3/src/main/java)
+
