@@ -66,10 +66,10 @@ public class Zoo {
         System.out.println("Add Aviary");
         System.out.println("//////////////////////////////////////////////////////////////");
 
-        Aviary<Carnivorous> aviarySmall = new Aviary(AviarySize.SMALL);
-        Aviary<Herbivore> aviaryMedium = new Aviary(AviarySize.MEDIUM);
-        Aviary<Herbivore> aviaryLARGE = new Aviary(AviarySize.LARGE);
-        Aviary<Carnivorous> aviaryHUGE = new Aviary(AviarySize.HUGE);
+        Aviary<Carnivorous> aviarySmall = new Aviary<Carnivorous>(AviarySize.SMALL);
+        Aviary<Herbivore> aviaryMedium = new Aviary<Herbivore>(AviarySize.MEDIUM);
+        Aviary<Herbivore> aviaryLARGE = new Aviary<Herbivore>(AviarySize.LARGE);
+        Aviary<Carnivorous> aviaryHUGE = new Aviary<Carnivorous>(AviarySize.HUGE);
 
         Aviary[] aviaries = {aviarySmall, aviaryMedium, aviaryLARGE, aviaryHUGE,};
         for (Aviary aviary : aviaries) {
