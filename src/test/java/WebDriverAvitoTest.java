@@ -17,7 +17,9 @@ public class WebDriverAvitoTest {
     @DataProvider
     public static Object[][] provider() {
         return new Object[][]{
-                {"Оргтехника и расходники", "принтер", "Дороже", 3}
+                {"Оргтехника и расходники", "принтер", "Владивосток", "Дороже", 3},
+                {"Настольные компьютеры", "игровой пк", "Москва", "Дешевле", 5},
+                {"Настольные компьютеры", "игровой пк", "Москва", "Дороже", 10}
         };
     }
 
@@ -57,8 +59,8 @@ public class WebDriverAvitoTest {
         step.filter(sort);
     }
 
-    @Test
-    public void nC3() {
+    @Test(dataProvider = "provider")
+    public void nC3(String category, String search, String city, String sort, int num) {
         step.getURL();
         step.Category(category);
         step.Search(search);
