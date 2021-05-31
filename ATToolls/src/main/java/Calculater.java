@@ -8,37 +8,31 @@ public class Calculater {
     public static void main(String[] args) throws IOException {
         Calculater cal = new Calculater();
 
+        System.out.print("Press first number: ");
+        Float a = Float.parseFloat(reader.readLine());
+
         System.out.print("Press apperator: ");
-        char actions = reader.readLine().toCharArray()[0];
+        String operator = reader.readLine();
 
-        System.out.print("Press first and second number: ");
-        Float num1 = Float.parseFloat(reader.readLine()), num2 = Float.parseFloat(reader.readLine());
+        System.out.print("Press second number: ");
+        Float b = Float.parseFloat(reader.readLine());
 
 
-        System.out.println("" + cal.calculate(num1, num2, actions));
+        System.out.println("" + cal.calculate(a, b, operator));
     }
 
-    public Object calculate(Object first, Object second, Object action) {
-        char actions = (char) action;
-        Float num1 = (Float) first;
-        Float num2 = (Float) second;
-
-        switch (actions) {
-            case ('+'):
-                return num1 + num2;
-            case ('-'):
-                return num1 - num2;
-            case ('*'):
-                return num1 * num2;
-            case ('/'):
-                try {
-                    return num1 / num2;
-                } catch (ArithmeticException e) {
-                    System.out.println("You cannot divide by zero");
-                    return false;
-                }
-
-        }
-        return false;
+    public Object calculate(Object a, Object b, Object operator) {
+        float result = 0;
+        if (operator.equals("+")) result = (Float) a + (Float) b;
+        if (operator.equals("-")) result = (Float) a - (Float) b;
+        if (operator.equals("*")) result = (Float) a * (Float) b;
+        if (operator.equals("/"))
+            try {
+                result = (Float) a / (Float) b;
+            } catch (ArithmeticException e) {
+                System.out.println("You cannot divide by zero");
+                return false;
+            }
+        return result;
     }
 }
